@@ -1,6 +1,5 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import java.util.concurrent.TimeUnit;
 
 
@@ -29,8 +28,8 @@ public class Main {
         TimeUnit.SECONDS.sleep(5);
 
         // login credentials and submit
-        js.executeScript("document.getElementById('emailaddress').value='zabih9224@gmail.com';");
-        js.executeScript("document.getElementsByName('password')[0].value='Zabi12345'");
+        js.executeScript("document.getElementById('emailaddress').value='abc@gmail.com';");
+        js.executeScript("document.getElementsByName('password')[0].value='password'");
         js.executeScript("document.getElementById('login-button').click();");
 
         // add new task
