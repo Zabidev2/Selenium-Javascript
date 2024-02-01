@@ -12,7 +12,7 @@ public class Main {
         // Instantiate a Driver class.
         WebDriver driver = new ChromeDriver();
 
-        Actions action = new Actions(driver);
+
 
         // Maximize the browser
         driver.manage().window().maximize();
