@@ -1,7 +1,6 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import java.util.concurrent.TimeUnit;
 
 
@@ -30,8 +29,8 @@ public class Main {
         TimeUnit.SECONDS.sleep(5);
 
         // login credentials and submit
-        js.executeScript("document.getElementById('emailaddress').value='abc@gmail.com';");
-        js.executeScript("document.getElementsByName('password')[0].value='password'");
+        js.executeScript("document.getElementById('emailaddress').value='zabih9224@gmail.com';");
+        js.executeScript("document.getElementsByName('password')[0].value='Zabi12345'");
         js.executeScript("document.getElementById('login-button').click();");
 
         // add new task
@@ -55,20 +54,20 @@ public class Main {
         // Get the details
         System.out.println("TASK REPORT");
         System.out.println("-----------------------------------------------------------");
-        System.out.println(driver.findElement(By.id("entityname")).getText());
-        System.out.println(driver.findElement(By.id("metadata-row-viewer-TASK_ID")).getText());
-        System.out.println(driver.findElement(By.id("field-render-AssignedTo")).getText());
-        System.out.println(driver.findElement(By.id("field-render-Category")).getText());
-        System.out.println(driver.findElement(By.id("field-render-DateDue")).getText());
-        System.out.println(driver.findElement(By.id("field-render-Reminder")).getText());
-        System.out.println(driver.findElement(By.id("field-render-Repeat")).getText());
-        System.out.println(driver.findElement(By.id("field-render-Progress")).getText());
-        System.out.println(driver.findElement(By.id("field-render-Priority")).getText());
-        System.out.println(driver.findElement(By.id("field-render-Status")).getText());
-        System.out.println(driver.findElement(By.id("field-render-LastUpdated")).getText());
-        System.out.println(driver.findElement(By.id("field-render-TaskCreated")).getText());
-        System.out.println(driver.findElement(By.id("field-render-CreatedBy")).getText());
-        System.out.println(driver.findElement(By.id("field-render-TaskOwner")).getText());
+        System.out.println(js.executeScript("return document.evaluate('//*[@id=\"metadata-row-viewer-TITLE\"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('metadata-row-viewer-TASK_ID').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-AssignedTo').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-Category').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-DateDue').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-Reminder').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-Repeat').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-Progress').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-Priority').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-Status').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-LastUpdated').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-TaskCreated').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-CreatedBy').innerText;"));
+        System.out.println(js.executeScript("return document.getElementById('field-render-TaskOwner').innerText;"));
 
         System.out.println("_______________________________________________________________");
 
